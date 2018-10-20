@@ -16,3 +16,17 @@ Progressively built solution, each step has it's own separate script
 * Log density rendering with vibrant colors and brightness/contrast/saturation adjustments
 * Log density rendering with reconstruction filters
 * Multithreaded log density rendering - final solution
+
+## Reconstruction filter visualization
+
+Play with reconstruction filters parameters
+Script: filter_vis
+
+![Sinc](filter_vis/00005B48_02430.png "Sinc Filter")
+
+Press to show:
+0 - Gaussian filter
+1 - Windowed Sinc filter
+2 - Blackman-Harris filter
+3 - Triangle filter
+4 - Hann filter
