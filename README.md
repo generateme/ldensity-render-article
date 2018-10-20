@@ -22,7 +22,7 @@ Progressively built solution, each step has it's own separate script
 Play with reconstruction filters parameters
 Script: filters_vis
 
-![Sinc](filters_vis/00005B48_02430.png "Sinc Filter")
+![Sinc](filters_vis/0000C203_00609.png "Sinc Filter")
 
 Press to show:
 * 0 - Gaussian filter
