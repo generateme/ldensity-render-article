@@ -1,0 +1,20 @@
+float gamma = 1.0; 
+float cgamma = 2.0; 
+float color_mix = 0.0; 
+float brightness = 1.0; 
+float contrast = 1.0; 
+float saturation = 1.0; 
+
+float gamma = 1.0; 
+float cgamma = 2.0; 
+float color_mix = 0.5; 
+float brightness = 1.0; 
+float contrast = 1.0; 
+float saturation = 1.0; 
+
+float gamma = 1.0; 
+float cgamma = 2.0; 
+float color_mix = 1.0; 
+float brightness = 1.0; 
+float contrast = 1.0; 
+float saturation = 1.0; 
