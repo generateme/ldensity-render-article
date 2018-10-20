@@ -20,13 +20,13 @@ Progressively built solution, each step has it's own separate script
 ## Reconstruction filter visualization
 
 Play with reconstruction filters parameters
-Script: filter_vis
+Script: filters_vis
 
-![Sinc](filter_vis/00005B48_02430.png "Sinc Filter")
+![Sinc](filters_vis/00005B48_02430.png "Sinc Filter")
 
 Press to show:
-0 - Gaussian filter
-1 - Windowed Sinc filter
-2 - Blackman-Harris filter
-3 - Triangle filter
-4 - Hann filter
+* 0 - Gaussian filter
+* 1 - Windowed Sinc filter
+* 2 - Blackman-Harris filter
+* 3 - Triangle filter
+* 4 - Hann filter
