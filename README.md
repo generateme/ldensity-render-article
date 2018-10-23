@@ -30,3 +30,7 @@ Press to show:
 * 2 - Blackman-Harris filter
 * 3 - Triangle filter
 * 4 - Hann filter
+
+## Clojure2d version
+
+Check out implementation in Clojure: [Clojure2d library](https://github.com/Clojure2D/clojure2d)
