@@ -1,3 +1,6 @@
+import java.util.concurrent.*;
+import java.util.List;
+
 // how much cores we have?
 int numberOfProcessors = Runtime.getRuntime().availableProcessors();
 // thread pool
@@ -36,9 +39,9 @@ class Runner<T> {
   // Instead create another instance of Runner
   void clearTasks() {
     tasks.clear();
-    if(futures != null) {
-      for(Future f : futures) {
-        if(!f.isDone()) {
+    if (futures != null) {
+      for (Future f : futures) {
+        if (!f.isDone()) {
           f.cancel(true);
         }
       }

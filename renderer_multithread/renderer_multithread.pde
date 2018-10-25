@@ -1,6 +1,4 @@
 import java.awt.Color;
-import java.util.concurrent.*;
-import java.util.List;
 
 // reconstruction filter
 AFilter filter = new Gaussian(1.0,2.0);
