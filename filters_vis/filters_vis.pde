@@ -21,6 +21,14 @@ AFilter makeFilter(float a, float b) {
     return new Triangle(a, b);
   case 4:
     return new Hann(a, b);
+  case 5:
+    return new CosineBell(a, b);
+  case 6:
+    return new Mitchell(a, b, 1.0, 0.0);
+  case 7:
+    return new Mitchell(a, b, 0.0, 0.5);
+  case 8:
+    return new Mitchell(a, b, 1.0/3.0, 1.0/3.0);
   default: 
     return new Gaussian(a, b);
   }
@@ -36,6 +44,14 @@ String filterName() {
     return "Triangle";
   case 4:
     return "Hann";
+  case 5:
+    return "CosineBell";
+  case 6:
+    return "Cubic";
+  case 7:
+    return "Catmull";
+  case 8:
+    return "Mitchell";
   default: 
     return "Gaussian";
   }
@@ -92,24 +108,11 @@ void draw() {
 
   if (diffx>0 && diffy>0) {
 
-    int[] ifx = new int[diffx];
-    int[] ify = new int[diffy];
-
-    for (int x=p0x; x<p1x; x++) {
-      double v = Math.abs( (x-fx)*f.iradius16);
-      ifx[x-p0x] = Math.min((int)Math.floor(v), 15);
-    }
-
-    for (int y=p0y; y<p1y; y++) {
-      double v = Math.abs( (y-fy)*f.iradius16);
-      ify[y-p0y] = Math.min((int)Math.floor(v), 15);
-    }
-
     fill(10, 255, 100, 50);
     for (int x=p0x; x<p1x; x++) {
-      int xx = ifx[x-p0x];
+      int xx = Math.min((int)Math.floor(Math.abs( (x-fx)*f.iradius16)), 15);
       for (int y=p0y; y<p1y; y++) {
-        int yy = ify[y-p0y];
+        int yy = Math.min((int)Math.floor(Math.abs( (y-fy)*f.iradius16)), 15);
         rect(xx*size, yy*size, size/2, size/2);
         rect(-xx*size, yy*size, size/2, size/2);
         rect(xx*size, -yy*size, size/2, size/2);
@@ -119,7 +122,7 @@ void draw() {
 
     stroke(200, 50);
     for (int x=p0x; x<p1x; x++) {
-      int xx = ifx[x-p0x];
+      int xx = Math.min((int)Math.floor(Math.abs( (x-fx)*f.iradius16)), 15);
       line(xx*size, 250, xx*size, 500);
       line(-xx*size, 250, -xx*size, 500);
     }
